@@ -17,3 +17,13 @@ create table category(
     name varchar(255)   NOT NULL,
     PRIMARY KEY (id)
     );
+
+
+create table product(
+    id int NOT NULL primary key auto_increment,
+    name varchar(255) NOT NULL,
+    description varchar(255),
+    price int,
+    status varchar(20),
+    categoryId int NOT NULL
+);
