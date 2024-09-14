@@ -1,2 +1,2 @@
 # Cafe-Management-Sysytem
-Cafe Management System built with Angular, Node.js, and SQL. Includes both Admin and User modules for efficient order management,  and user interactions.
+The system includes features to manage products, product categories, and orders, while also allowing for bill tracking. Additionally, it provides user management capabilities and a comprehensive dashboard for efficient oversight and control.
