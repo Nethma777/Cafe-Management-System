@@ -27,3 +27,16 @@ create table product(
     status varchar(20),
     categoryId int NOT NULL
 );
+
+
+create table bill(
+    id int NOT NULL primary key auto_increment,
+    uuid varchar(255) NOT NULL,
+    name varchar(255) NOT NULL,
+    email varchar(255) NOT NULL,
+    contactNumber varchar(20) NOT NULL,
+    paymentMode varchar(20) NOT NULL,
+    total int NOT NULL,
+    productDetails JSON DEFAULT NULL,
+    CreatedBy varchar(255) NOT NULL,
+);
