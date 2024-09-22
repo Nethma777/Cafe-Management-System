@@ -69,7 +69,7 @@ body {
   padding: 6px;
   text-align: center;
   color: white;
-  background: #e53935;
+  background: #5c1704;
 }
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
@@ -111,7 +111,7 @@ body {
   display: flex;
   align-items: center;
   justify-content:center;
-  background-color: #e53935;
+  background-color: #5c1704;
 }
 
 nav {
@@ -221,11 +221,10 @@ a:hover::after {
 }
 .bg-image {
   /* The image used */
-  background-image: url("../../assets/img/food1.jpg");
+  background-image: url("../../assets/img/Cafe.png");
   
-  /* Add the blur effect */
-  filter: blur(3px);
-  -webkit-filter: blur(3px);
+
+  
   
   /* Full height */
   height: 100%; 
