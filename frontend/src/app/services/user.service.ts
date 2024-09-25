@@ -32,4 +32,9 @@ export class UserService {
     const headers = new HttpHeaders().set('Content-Type', 'application/json');
     return this.httpClient.post(`${this.url}/user/login`, data, { headers });
   }
+
+  checkToken(): Observable<any> {
+    return this.httpClient.get(this.url + "/user/checkToken");
+  }
+  
 }
