@@ -1,7 +1,9 @@
+import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 import { Component } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-
+import { ConfirmationComponent } from 'src/app/material-component/dialog/confirmation/confirmation.component';
+import { ChangePasswordComponent } from 'src/app/material-component/dialog/change-password/change-password.component';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -13,5 +15,25 @@ export class AppHeaderComponent {
     private dialog: MatDialog) {
 
   }
+
+  logout() {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.data={
+      message:'Logout'
+    };
+
+    const dialogRef = this.dialog.open(ConfirmationComponent, dialogConfig);
+    const sub = dialogRef.componentInstance.onEmitStatusChange.subscribe((user) => {
+      dialogRef.close();
+      localStorage.clear();
+      this.router.navigate(['/']);
+  })
+}
+
+changePassword() {
+  const dialogConfig = new MatDialogConfig();
+  dialogConfig.width = '550px';
+  this.dialog.open(ChangePasswordComponent, dialogConfig);
+}
 
 }
